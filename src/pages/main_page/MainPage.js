@@ -1,23 +1,24 @@
 import React from "react";
+import Dashboard from "../../components/Dashboard";
 import Header from "../../components/Header";
 import SideBar from "../../components/SideBar";
 
 function MainPage() {
   return (
-   <div className="flex"> 
-    
+    <div className="flex flex-row">
       <section className="" id="left_Section">
-       <SideBar />
+        <SideBar />
       </section>
-
-      <section className="" id="header_Section">
+      <div>
+        <section className="" id="header_Section">
           <Header />
-      </section>
-{/* 
-      <section className="" id="right_Section"> 
+        </section>
 
-      </section> */}
+        <section className="" id="right_Section">
+          <Dashboard />
+        </section>
       </div>
+    </div>
   );
 }
 
