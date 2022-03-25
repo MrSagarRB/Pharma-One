@@ -5,16 +5,17 @@ import SideBar from "../../components/SideBar";
 
 function MainPage() {
   return (
-    <div className="flex flex-row">
-      <section className="" id="left_Section">
+    <div className=" flex flex-row">
+      <section id="left_Section" className="">
         <SideBar />
       </section>
-      <div>
+
+      <div className=" border-2 w-full">
         <section className="" id="header_Section">
           <Header />
         </section>
 
-        <section className="" id="right_Section">
+        <section id="right_Section" className="">
           <Dashboard />
         </section>
       </div>

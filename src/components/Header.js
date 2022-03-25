@@ -5,7 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 function Header() {
   return (
-    <div className=" h-[60px] w-[1350px] bg-[#F7FAFD] ml-auto border-2 flex items-center justify-between  py-1 px-10">
+    <div className=" h-[60px]  bg-[#F7FAFD] border-2 flex items-center justify-between  py-1 px-20">
       
       <div className="h-[38px] w-[440px]  rounded-[4px] flex items-center ">
         <input
