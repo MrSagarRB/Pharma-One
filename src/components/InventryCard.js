@@ -2,7 +2,7 @@ import React from "react";
 
 function InventryCard() {
   return (
-    <div class="w-[456px] h-[130px] border-2  rounded-[4px] text-[#495566]">
+    <div class="w-[556px] h-[140px] border-2  rounded-[4px] text-[#495566]">
       <div class="flex justify-between border-b-2 px-4 py-2">
         {" "}
         <p className="text-[16px] font-semibold">Inventory</p>{" "}
@@ -14,7 +14,7 @@ function InventryCard() {
           <p>Total no of Medicines</p>
         </div>
         <div>
-        <p className="text-[20px] font-bold"> 24</p>
+          <p className="text-[20px] font-bold"> 24</p>
           <p>Medicine Groups</p>
         </div>
       </div>

@@ -3,42 +3,77 @@
 @tailwind utilities;
 
 @layer components {
-    .green_card {
-       background-color:#01A768;
-       border-top:0.2px solid #01A768;
-       
-    }
-
-    .yellow_card{
-        background-color:#FED600;
-        border-top:0.2px solid #FED600;
-    }
-
-    .blue_card{
-        background-color:#03A9F5;
-        border-top:0.2px solid #03A9F5;
-    }
-
-    .red_card{
-        background-color:#F0483E;
-        border-top:0.2px solid #F0483E;
-
-    }
-
-
-
-
-
-
-.card{
-    margin-top:auto;
-    opacity: 0.8;
-    width:100%;
-    text-align:center;
-    font-size:12px;
-    color:#ffff;
-}
-
-
-
+  .green_card {
+    background-color: #01a768;
+    border-top: 0.2px solid #01a768;
   }
+
+  .yellow_card {
+    background-color: #fed600;
+    border-top: 0.2px solid #fed600;
+  }
+
+  .blue_card {
+    background-color: #03a9f5;
+    border-top: 0.2px solid #03a9f5;
+  }
+
+  .red_card {
+    background-color: #f0483e;
+    border-top: 0.2px solid #f0483e;
+  }
+
+  .blue_border {
+    border: 0.2px solid #03a9f5;
+    @apply w-[212px] h-[152px] flex flex-col items-center mt-10 bg-[#FFFFFF]  rounded-[4px];
+  }
+  .green_border {
+    border: 0.2px solid #01a768;
+    @apply w-[212px] h-[152px] flex flex-col items-center mt-10 bg-[#FFFFFF]  rounded-[4px];
+  }
+
+  .red_border {
+    border: 0.2px solid #f0483e;
+    @apply w-[212px] h-[152px] flex flex-col items-center mt-10 bg-[#FFFFFF]  rounded-[4px];
+  }
+  .yellow_border {
+    border: 0.2px solid #fed600;
+    @apply w-[212px] h-[152px] flex flex-col items-center mt-10 bg-[#FFFFFF]  rounded-[4px];
+  }
+
+  .card {
+    margin-top: auto;
+    opacity: 0.8;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #ffff;
+  }
+
+  table {
+    margin-top: 10px;
+
+    background: #ffffff;
+    border: 1px solid rgba(29, 36, 46, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  th {
+    color: #1d242e;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid rgba(29, 36, 46, 0.3);
+  }
+
+  td {
+    font-size: 14px;
+    color: #1d242e;
+    padding: 10px;
+    
+  }
+  .border_bottom{
+    border: 0.4px solid rgba(29, 36, 46, 0.3);
+  }
+}

@@ -43,7 +43,7 @@ function Dashboard() {
           })}
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-2 ml-20 mt-2"> 
+      <div className="grid grid-cols-2 gap-2 ml-20 mt-9"> 
         <InventoryCard /> 
         <InventoryCard /> 
         <InventoryCard /> 

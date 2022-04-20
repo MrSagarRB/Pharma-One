@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Routes, Route,Link } from "react-router-dom";
 
 // MUI icon
 import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
@@ -11,7 +12,7 @@ import ChatIcon from "@mui/icons-material/Chat";
 import SettingsIcon from "@mui/icons-material/Settings";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import HelpCenterIcon from "@mui/icons-material/HelpCenter";
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 //  Material ui
 import { styled } from "@mui/material/styles";
@@ -69,14 +70,17 @@ function SideBar() {
       <div className="flex gap-3 px-8 py-8 items-center">
         <img src="./profile.png" />
         <div>
-          <p className="text-[#ffff] text-[14px]">Subash</p>
+          <p className="text-[#ffff] text-[14px]">Sagar</p>
           <p className="text-[#FED600] text-[11px]">Super Admin</p>
         </div>
-   <MoreVertIcon sx={{color: "#FFFFFF"}} className="cursor-pointer"/>
+        <MoreVertIcon sx={{ color: "#FFFFFF" }} className="cursor-pointer" />
       </div>
       <div className=" bg-[#009099] text-[#ffff] w-[256px] h-[46px] flex items-center gap-2 pl-5">
         {" "}
-        <AutoAwesomeMosaicIcon /> <p className="font-medium">Dashboard</p>{" "}
+        <AutoAwesomeMosaicIcon />{" "}
+        <a href="/" className="font-medium">
+          Dashboard
+        </a>{" "}
       </div>
       {/*  Second Item */}
       <div>
@@ -89,14 +93,14 @@ function SideBar() {
               {" "}
               <div className="flex items-center gap-2 pl-1">
                 {" "}
-                <ShowChartIcon /> Inventory
+                <ShowChartIcon /> <a href="/Inventory"> Inventory</a>
               </div>
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <div className="flex flex-col justify-center pl-10 gap-3">
-              <p>List of Medicines</p>
-              <p>Medicine Groups</p>
+              <a href="/ListOfMedicines">List of Medicines</a>
+              <a href="/MedicineGroups">Medicine Groups</a>
             </div>
           </AccordionDetails>
         </Accordion>
@@ -113,7 +117,7 @@ function SideBar() {
               {" "}
               <div className="flex items-center gap-2 pl-1">
                 {" "}
-                <MedicalServicesIcon /> Reports
+                <MedicalServicesIcon /> <a href="/Report"> Reports</a>
               </div>
             </Typography>
           </AccordionSummary>
@@ -129,7 +133,7 @@ function SideBar() {
       {/* Configuration */}
       <div className=" hover:bg-[#009099] text-[#ffff] w-[256px] h-[46px] flex items-center gap-2 pl-5">
         {" "}
-        <TuneIcon /> <p className="font-medium">Configuration</p>{" "}
+        <TuneIcon /> <a href="/Configuration" className="font-medium"> Configuration</a>{" "}
       </div>
       <hr />
 
@@ -159,7 +163,11 @@ function SideBar() {
       {/* NOtification  */}
 
       <div className=" hover:bg-[#009099] text-[#ffff] w-[256px] h-[46px] flex items-center gap-2 pl-5 ">
-        <NotificationsIcon /> <p className="font-medium">Notifications</p> <span className="px-1 py-1 text-[10px] rounded-full ml-auto mr-3 bg-[#F0483E]"> 01</span>
+        <NotificationsIcon /> <p className="font-medium">Notifications</p>{" "}
+        <span className="px-1 py-1 text-[10px] rounded-full ml-auto mr-3 bg-[#F0483E]">
+          {" "}
+          01
+        </span>
       </div>
 
       {/* Chat With Visiter */}
@@ -182,7 +190,10 @@ function SideBar() {
       <div className=" hover:bg-[#009099] text-[#ffff] w-[256px] h-[46px] flex items-center gap-2 pl-5">
         <HelpCenterIcon /> <p className="font-medium">Get Technical Help</p>{" "}
       </div>
-      <div className="bg-[#1D242E] text-[10px] text-[#FFFFFFB2] flex  justify-between py-3 px-5  absolute  bottom-0 w-[256px] "> <p className="">Powered by Subash © 2022</p>  <p>v1.1.2</p> </div>
+      <div className="bg-[#1D242E] text-[10px] text-[#FFFFFFB2] flex  justify-between py-3 px-5  absolute  bottom-0 w-[256px] ">
+        {" "}
+        <p className="">Powered by Subash © 2022</p> <p>v1.1.2</p>{" "}
+      </div>
     </div>
   );
 }
