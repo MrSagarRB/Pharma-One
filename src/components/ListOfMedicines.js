@@ -65,7 +65,7 @@ function ListOfMedicines() {
           </tr>
           <tr>
             {" "}
-            <td> Augmentin 625 Duo Tablet </td> <td> D06ID232435454</td>
+            <td> <a href="/AzithralTablet"> Azithral Tablet</a> </td> <td> D06ID232435454</td>
             <td> Generic Medicine</td>
             <td>60 </td>
             <td>

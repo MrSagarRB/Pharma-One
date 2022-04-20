@@ -10,14 +10,10 @@ import Report from "../../components/Report";
 import Configurations from "../../components/Configurations";
 import ListOfMedicines from "../../components/ListOfMedicines";
 import GenericMedicine from "../../components/GenericMedicine";
-
-
-
-
-
+import SalesReport from "../../components/SalesReport";
+import AzithralTablet from "../../components/AzithralTablet";
 
 function MainPage() {
-
   return (
     <div className=" flex flex-row">
       <section id="left_Section" className="">
@@ -38,10 +34,12 @@ function MainPage() {
               <Route path="/Report" element={<Report />} />
               <Route path="/Configuration" element={<Configurations />} />
               <Route path="/ListOfMedicines" element={<ListOfMedicines />} />
-              <Route path="/GenericMedicine" element={<GenericMedicine/>} />
+              <Route path="/GenericMedicine" element={<GenericMedicine />} />
+              <Route path="/SalesReport" element={<SalesReport />} />
+              <Route path="/AzithralTablet" element={ <AzithralTablet />} />
 
 
-              
+             
             </Routes>
           </BrowserRouter>
         </section>

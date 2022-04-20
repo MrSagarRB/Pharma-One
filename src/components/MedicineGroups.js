@@ -40,7 +40,10 @@ function MedicineGroups() {
           <th> Action</th>
         </tr>
         <tr className="border_bottom">
-          <td> <a href="/GenericMedicine"> Generic Medicine</a></td>
+          <td>
+            {" "}
+            <a href="/GenericMedicine"> Generic Medicine</a>
+          </td>
           <td>02</td>
           <td>
             {" "}

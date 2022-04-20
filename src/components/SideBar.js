@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route,Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 // MUI icon
 import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
@@ -78,7 +78,7 @@ function SideBar() {
       <div className=" bg-[#009099] text-[#ffff] w-[256px] h-[46px] flex items-center gap-2 pl-5">
         {" "}
         <AutoAwesomeMosaicIcon />{" "}
-        <a href="/" className="font-medium">
+        <a href="/" className=" a_remove">
           Dashboard
         </a>{" "}
       </div>
@@ -93,14 +93,14 @@ function SideBar() {
               {" "}
               <div className="flex items-center gap-2 pl-1">
                 {" "}
-                <ShowChartIcon /> <a href="/Inventory"> Inventory</a>
+                <ShowChartIcon /> <a href="/Inventory" className="a_remove"> Inventory</a>
               </div>
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <div className="flex flex-col justify-center pl-10 gap-3">
-              <a href="/ListOfMedicines">List of Medicines</a>
-              <a href="/MedicineGroups">Medicine Groups</a>
+              <a href="/ListOfMedicines" className="a_remove">List of Medicines</a>
+              <a href="/MedicineGroups" className="a_remove">Medicine Groups</a>
             </div>
           </AccordionDetails>
         </Accordion>
@@ -123,7 +123,9 @@ function SideBar() {
           </AccordionSummary>
           <AccordionDetails>
             <div className="flex flex-col justify-center  pl-10 gap-3">
-              <p>Sales Report</p>
+              <a href="/SalesReport" className="a_remove">
+                <p>Sales Report </p>
+              </a>
               <p>Payments Report</p>
             </div>
           </AccordionDetails>
@@ -133,7 +135,11 @@ function SideBar() {
       {/* Configuration */}
       <div className=" hover:bg-[#009099] text-[#ffff] w-[256px] h-[46px] flex items-center gap-2 pl-5">
         {" "}
-        <TuneIcon /> <a href="/Configuration" className="font-medium"> Configuration</a>{" "}
+        <TuneIcon />{" "}
+        <a href="/Configuration" className="font-medium">
+          {" "}
+          Configuration
+        </a>{" "}
       </div>
       <hr />
 
