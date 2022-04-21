@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Tooltip, Button, Grid } from "@nextui-org/react";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 // MUI icon
 import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
@@ -21,6 +23,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -69,14 +72,19 @@ function SideBar() {
       </div>
       <div className="flex gap-3 px-8 py-8 items-center">
         <img src="./profile.png" />
-        <div>
+        <div className="">
           <p className="text-[#ffff] text-[14px]">Sagar</p>
           <p className="text-[#FED600] text-[11px]">Super Admin</p>
         </div>
-        <MoreVertIcon sx={{ color: "#FFFFFF" }} className="cursor-pointer" />
+        <Tooltip content={<TooltipContent />} placement="bottomEnd">
+          <MoreVertIcon
+            sx={{ color: "#FFFFFF" }}
+            className="cursor-pointer ml-8"
+          />
+        </Tooltip>
       </div>
+
       <div className=" bg-[#009099] text-[#ffff] w-[256px] h-[46px] flex items-center gap-2 pl-5">
-        {" "}
         <AutoAwesomeMosaicIcon />{" "}
         <a href="/" className=" a_remove">
           Dashboard
@@ -93,14 +101,22 @@ function SideBar() {
               {" "}
               <div className="flex items-center gap-2 pl-1">
                 {" "}
-                <ShowChartIcon /> <a href="/Inventory" className="a_remove"> Inventory</a>
+                <ShowChartIcon />{" "}
+                <a href="/Inventory" className="a_remove">
+                  {" "}
+                  Inventory
+                </a>
               </div>
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <div className="flex flex-col justify-center pl-10 gap-3">
-              <a href="/ListOfMedicines" className="a_remove">List of Medicines</a>
-              <a href="/MedicineGroups" className="a_remove">Medicine Groups</a>
+              <a href="/ListOfMedicines" className="a_remove">
+                List of Medicines
+              </a>
+              <a href="/MedicineGroups" className="a_remove">
+                Medicine Groups
+              </a>
             </div>
           </AccordionDetails>
         </Accordion>
@@ -205,3 +221,23 @@ function SideBar() {
 }
 
 export default SideBar;
+
+function TooltipContent() {
+  return (
+    <div className="w-[125px] h-[86px] p-2 text-[14px]">
+      <div className="p-2">
+        {" "}
+        <a href="/">
+          {" "}
+          <AccountCircleIcon /> My Profile
+        </a>
+      </div>
+      <hr />
+      <div className="p-2 text-red-500">
+        <a href="/">
+          <LogoutIcon /> My Profile{" "}
+        </a>
+      </div>
+    </div>
+  );
+}

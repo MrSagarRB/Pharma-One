@@ -12,6 +12,7 @@ import ListOfMedicines from "../../components/ListOfMedicines";
 import GenericMedicine from "../../components/GenericMedicine";
 import SalesReport from "../../components/SalesReport";
 import AzithralTablet from "../../components/AzithralTablet";
+import AddNewMedicine from "../../components/AddNewMedicine";
 
 function MainPage() {
   return (
@@ -36,10 +37,8 @@ function MainPage() {
               <Route path="/ListOfMedicines" element={<ListOfMedicines />} />
               <Route path="/GenericMedicine" element={<GenericMedicine />} />
               <Route path="/SalesReport" element={<SalesReport />} />
-              <Route path="/AzithralTablet" element={ <AzithralTablet />} />
-
-
-             
+              <Route path="/AzithralTablet" element={<AzithralTablet />} />
+              <Route path="/AddNewMedicine" element={<AddNewMedicine />} />
             </Routes>
           </BrowserRouter>
         </section>

@@ -11,6 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import RedButtons from "./buttons/RedButtons";
 
 function ListOfMedicines() {
   return (
@@ -24,9 +25,9 @@ function ListOfMedicines() {
           </h1>
           <p className="text-[14px]">List of medicines available for sales.</p>
         </div>
-        <button className="flex bg-[#F0483E] px-6 py-2 rounded-[4px] text-white text-[15px]">
-          <AddIcon /> Add New Group
-        </button>
+        <a href="/AddNewMedicine" className="">
+          <RedButtons title="Add New Item" />
+        </a>
       </div>
       <div className="flex  justify-between items-center mt-5">
         <div className="h-[38px] w-[340px]  rounded-[4px] flex items-center  ">
@@ -65,7 +66,11 @@ function ListOfMedicines() {
           </tr>
           <tr>
             {" "}
-            <td> <a href="/AzithralTablet"> Azithral Tablet</a> </td> <td> D06ID232435454</td>
+            <td>
+              {" "}
+              <a href="/AzithralTablet"> Azithral Tablet</a>{" "}
+            </td>{" "}
+            <td> D06ID232435454</td>
             <td> Generic Medicine</td>
             <td>60 </td>
             <td>

@@ -15,10 +15,10 @@ function ApplicationCard(props) {
         </div>
         <div>
           <h1 className="text-2xl font-semibold"> {props.value}</h1>
-          <p  className="text-[14px]">{props.valueDescription}</p>
+          <p className="text-[14px]">{props.valueDescription}</p>
         </div>
       </div>
-    </div>    
+    </div>
   );
 }
 

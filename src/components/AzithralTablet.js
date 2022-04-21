@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ModeEditOutlineIcon from "@mui/icons-material/ModeEditOutline";
 import SearchIcon from "@mui/icons-material/Search";
 import ApplicationCard from "./ApplicationCard";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 function AzithralTablet() {
+  const [visible, setVisible] = React.useState(false);
+
   return (
     <div className="px-16 py-6">
       <div className="flex justify-between items-center w-[1240px]">
@@ -17,7 +20,7 @@ function AzithralTablet() {
           <p className="text-[14px]">List of medicines available for sales.</p>
         </div>
         <button className="flex bg-[#03A9F5] px-6 py-2 rounded-[4px] text-white text-[15px] gap-2">
-          <ModeEditOutlineIcon sx={{ fontSize: 20 }} /> Add New Group
+          <ModeEditOutlineIcon sx={{ fontSize: 20 }} /> Add Medicine
         </button>
       </div>
       <div className="h-[38px] w-[340px]  rounded-[4px] flex items-center  mt-5">
@@ -50,10 +53,14 @@ function AzithralTablet() {
         title="How to use"
         text="Take this medication by mouth with or without food as directed by your doctor, usually once daily."
       />
-       <TextCard
+      <TextCard
         title="Side Effects"
         text="Dizziness, lightheadedness, drowsiness, nausea, vomiting, tiredness, excess saliva/drooling, blurred vision, weight gain, constipation, headache, and trouble sleeping may occur. If any of these effects persist or worsen, consult your doctor."
       />
+      <div className="text-[#F0483E] flex items-center  border-[#F0483E] border-[0.4px] w-[161px] h-[46px] mt-5 justify-center gap-2 bg-[#FFFFFF] ">
+        <DeleteOutlineIcon sx={{ color: ["#F0483E"] }} />
+        Delete Group
+      </div>
     </div>
   );
 }

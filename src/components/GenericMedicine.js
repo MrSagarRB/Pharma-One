@@ -5,10 +5,44 @@ import SearchIcon from "@mui/icons-material/Search";
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
 
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import { Modal } from "@nextui-org/react";
 
 function GenericMedicine() {
+  const [visible, setVisible] = React.useState(false);
+  const handler = () => setVisible(true);
+
+  const closeHandler = () => {
+    setVisible(false);
+    console.log("closed");
+  };
+
   return (
     <div className=" px-16 py-6">
+      <div>
+        <Modal open={visible} onClose={closeHandler} closeButton width="567px">
+          <div className="text-left  px-16 py-10">
+            <h1 className="text-[24px] text-[#1D242E] font-semibold">
+              Add Medicine
+            </h1>
+            <div className="mt-3">
+              <p className="my-2"> Medicine</p>
+              <div className="h-[38px] w-[340px]  rounded-[4px] flex items-center  ">
+                <input
+                  type="text"
+                  className=" text-[#1d242e]  h-full bg-[#ffff] outline-none px-3 text-[12px] w-[340px] border border-[#1D242E]"
+                  placeholder="Search for anything here.."
+                />
+              </div>
+              <button
+                className="flex bg-[#F0483E] px-6 py-2 rounded-[4px] text-white text-[15px] mt-3 "
+                onClick={handler}
+              >
+                <AddIcon /> Add New Medicine to Group
+              </button>
+            </div>
+          </div>
+        </Modal>
+      </div>
       <div className="flex justify-between items-center w-[1240px]">
         <div>
           <h1 className="font-bold text-[24px] text-gray-500">
@@ -18,8 +52,11 @@ function GenericMedicine() {
           </h1>
           <p className="text-[14px]">Detailed view of a medicine group.</p>
         </div>
-        <button className="flex bg-[#F0483E] px-6 py-2 rounded-[4px] text-white text-[15px]">
-          <AddIcon /> Add New Group
+        <button
+          className="flex bg-[#F0483E] px-6 py-2 rounded-[4px] text-white text-[15px] "
+          onClick={handler}
+        >
+          <AddIcon /> Add New Medicine
         </button>
       </div>
       <div className="flex  justify-between items-center mt-5">

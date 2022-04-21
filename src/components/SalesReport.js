@@ -7,8 +7,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 // import "rsuite/dist/rsuite.min.css";
 import { DateRangePicker } from "rsuite";
 
-
-
 import ReactApexChart from "react-apexcharts";
 
 function SalesReport() {

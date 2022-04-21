@@ -1,12 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import CircleIcon from "@mui/icons-material/Circle";
 import SearchIcon from "@mui/icons-material/Search";
+import Clock from "react-live-clock";
 
 function Header() {
+  const [greetingMsg, setGeetingMsg] = useState();
+
+  const d = new Date();
+  const todayDate = d.getDate();
+  const monthIndex = d.getMonth();
+  const year = d.getFullYear();
+  var hr = d.getHours();
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  useEffect(() => {
+    if (hr >= 0 && hr < 12) {
+      setGeetingMsg("Good Morning!");
+    } else if (hr == 12) {
+      setGeetingMsg("Good Noon!");
+    } else if (hr >= 12 && hr <= 17) {
+      setGeetingMsg("Good Afternoon!");
+    } else {
+      setGeetingMsg("Good Evening!");
+    }
+  }, [hr]);
+
+  console.log(greetingMsg);
+
   return (
     <div className=" h-[60px]  bg-[#F7FAFD] border-2 flex items-center justify-between  py-1 px-20">
-      
       <div className="h-[38px] w-[440px]  rounded-[4px] flex items-center ">
         <input
           type="text"
@@ -25,11 +61,15 @@ function Header() {
       <div className="flex flex-col items-center text-[#1D242E]">
         <div>
           {" "}
-          <CircleIcon className="text-[#FED600]" />{" "}
-          <span className="text-[14px]"> Good Morning </span>{" "}
+          <CircleIcon className="text-[#FED600] animate-pulse" />{" "}
+          <span className="text-[14px]"> {greetingMsg} </span>{" "}
         </div>
-        <div>
-          <span className=" text-[12px]"> 14 January 2022 . 22:45:04</span>{" "}
+        <div className="w-[200px]">
+          <span className=" text-[18px]">
+            {" "}
+            {todayDate + " " + month[monthIndex] + " " + year} &nbsp;{" "}
+            <Clock format={"HH:mm:ss"} ticking={true} timezone={"US/Pacific"} />
+          </span>{" "}
         </div>
       </div>
     </div>

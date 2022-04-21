@@ -3,40 +3,53 @@ import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
 import FmdBadIcon from "@mui/icons-material/FmdBad";
 
-
 export default [
-
-
   {
-    icon: <HealthAndSafetyIcon sx={{ color: "#01A768", fontSize: "50px" }}
-    className="mt-3" />,
+    icon: (
+      <HealthAndSafetyIcon
+        sx={{ color: "#01A768", fontSize: "50px" }}
+        className="mt-3"
+      />
+    ),
     status: "Good",
     description: "Inventory Status",
     buttonText: "View Detailed Report",
-    styles:"green_card card"
+    styles: "green_card card",
   },
   {
-    icon: <CurrencyExchangeIcon sx={{ color: "#FED600", fontSize: "50px" }}
-    className="mt-3" />,
+    icon: (
+      <CurrencyExchangeIcon
+        sx={{ color: "#FED600", fontSize: "50px" }}
+        className="mt-3"
+      />
+    ),
     status: "Good",
     description: "Inventory Status",
     buttonText: "View Detailed Report",
-    styles:"yellow_card card "
+    styles: "yellow_card card ",
   },
   {
-    icon: <MedicalServicesIcon sx={{ color: "#03A9F5", fontSize: "50px" }}
-    className="mt-3" />,
+    icon: (
+      <MedicalServicesIcon
+        sx={{ color: "#03A9F5", fontSize: "50px" }}
+        className="mt-3"
+      />
+    ),
     status: "Good",
     description: "Inventory Status",
     buttonText: "View Detailed Report",
-   styles:"blue_card card"
+    styles: "blue_card card",
   },
   {
-    icon: <FmdBadIcon sx={{ color: "#F0483E", fontSize: "50px" }}
-    className="mt-3" />,
+    icon: (
+      <FmdBadIcon
+        sx={{ color: "#F0483E", fontSize: "50px" }}
+        className="mt-3"
+      />
+    ),
     status: "Good",
     description: "Inventory Status",
     buttonText: "View Detailed Report",
-   styles:"red_card card"
+    styles: "red_card card",
   },
 ];

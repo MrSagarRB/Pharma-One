@@ -4,6 +4,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import SearchIcon from "@mui/icons-material/Search";
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import RedButtons from "./buttons/RedButtons";
 
 function MedicineGroups() {
   return (
@@ -17,9 +18,7 @@ function MedicineGroups() {
           </h1>
           <p className="text-[14px]">List of medicines available for sales.</p>
         </div>
-        <button className="flex bg-[#F0483E] px-6 py-2 rounded-[4px] text-white text-[15px]">
-          <AddIcon /> Add New Group
-        </button>
+        <RedButtons title="Add New Group" />
       </div>
       <div className="h-[38px] w-[340px]  rounded-[4px] flex items-center mt-5 ">
         <input
