@@ -77,3 +77,12 @@
     border: 0.4px solid rgba(29, 36, 46, 0.3);
   }
 }
+
+
+.test{
+  border: 1px solid red;
+}
+
+.animation1{
+  transition: 0.5s;
+}

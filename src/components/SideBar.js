@@ -65,7 +65,7 @@ function SideBar() {
   };
 
   return (
-    <div className="w-[256px] h-screen  bg-[#283342]">
+    <div className="w-[256px] h-screen  bg-[#283342] relative">
       <div className="w-[256px] h-[60px] flex items-center justify-center gap-3 bg-[#1D242E]">
         <img src="./logo.png" />{" "}
         <span className="text-[#FFFFFF] text-[18px]">Pharma One</span>{" "}
@@ -212,9 +212,9 @@ function SideBar() {
       <div className=" hover:bg-[#009099] text-[#ffff] w-[256px] h-[46px] flex items-center gap-2 pl-5">
         <HelpCenterIcon /> <p className="font-medium">Get Technical Help</p>{" "}
       </div>
-      <div className="bg-[#1D242E] text-[10px] text-[#FFFFFFB2] flex  justify-between py-3 px-5  absolute  bottom-0 w-[256px] ">
+      <div className="test bg-[#1D242E] text-[10px] text-[#FFFFFFB2] flex  justify-between py-3 px-5  absolute  bottom-0 w-full ">
         {" "}
-        <p className="">Powered by Subash © 2022</p> <p>v1.1.2</p>{" "}
+        <p className="">Powered by Sagar © 2022</p> <p>v1.1.2</p>{" "}
       </div>
     </div>
   );

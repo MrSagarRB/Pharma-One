@@ -17,7 +17,10 @@ import AddNewMedicine from "../../components/AddNewMedicine";
 function MainPage() {
   return (
     <div className=" flex flex-row">
-      <section id="left_Section" className="">
+      <section
+        id="left_Section"
+        className="test w-[0px] hover:w-auto overflow-hidden  animation1"
+      >
         <SideBar />
       </section>
 
