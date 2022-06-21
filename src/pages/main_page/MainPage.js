@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Dashboard from "../../components/Dashboard";
 import Header from "../../components/Header";
 import Inventory from "../../components/Inventory";
@@ -22,6 +22,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 
 function MainPage() {
+const [expand,setExpand]=useState(false)
+
+
   return (
     <div className=" flex flex-row">
       <section
@@ -33,11 +36,11 @@ function MainPage() {
         <section className="  " id="header_Section">
           <Header />
         </section>
-        <div className="w-[50px]  overflow-hidden">
+        <div className="w-[50px]  overflow-hidden " onClick={()=>{setExpand(!expand)}}>
           <SideBarToggle />
         </div>
 
-        <section id="right_Section" className=" bg-slate-100">
+        <section id="right_Section" className= {`bg-slate-100  ${expand? "ml-0" : "ml-[256px]"} `}>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Dashboard />} />
