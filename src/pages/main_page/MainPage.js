@@ -36,11 +36,11 @@ const [expand,setExpand]=useState(false)
         <section className="  " id="header_Section">
           <Header />
         </section>
-        <div className="w-[50px]  overflow-hidden " onClick={()=>{setExpand(!expand)}}>
+        <div className="w-[50px]  overflow-hidden " >
           <SideBarToggle />
         </div>
 
-        <section id="right_Section" className= {`bg-slate-100  ${expand? "ml-0" : "ml-[256px]"} `}>
+        <section id="right_Section" className= {`bg-slate-100   ${expand? "ml-0" : "ml-[256px]"} `}>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Dashboard />} />
