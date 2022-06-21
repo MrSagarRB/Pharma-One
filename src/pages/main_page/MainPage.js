@@ -14,16 +14,12 @@ import SalesReport from "../../components/SalesReport";
 import AzithralTablet from "../../components/AzithralTablet";
 import AddNewMedicine from "../../components/AddNewMedicine";
 
-
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
-import MenuIcon from '@mui/icons-material/Menu';
-
-
+import MenuIcon from "@mui/icons-material/Menu";
 
 function MainPage() {
-const [expand,setExpand]=useState(false)
-
+  const [expand, setExpand] = useState(false);
 
   return (
     <div className=" flex flex-row">
@@ -36,11 +32,11 @@ const [expand,setExpand]=useState(false)
         <section className="  " id="header_Section">
           <Header />
         </section>
-        <div className="w-[50px]  overflow-hidden " >
+        <div className="w-[50px]  overflow-hidden ">
           <SideBarToggle />
         </div>
 
-        <section id="right_Section" className= {`bg-slate-100   ${expand? "ml-0" : "ml-[256px]"} `}>
+        <section id="right_Section" className={`bg-slate-100 `}>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Dashboard />} />
@@ -85,7 +81,9 @@ function SideBarToggle() {
   return (
     <div>
       <div className=" absolute top-4">
-        <Button onClick={toggleDrawer("left", true)}><MenuIcon/></Button>
+        <Button onClick={toggleDrawer("left", true)}>
+          <MenuIcon />
+        </Button>
       </div>
 
       <Drawer
