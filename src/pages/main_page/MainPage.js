@@ -14,22 +14,30 @@ import SalesReport from "../../components/SalesReport";
 import AzithralTablet from "../../components/AzithralTablet";
 import AddNewMedicine from "../../components/AddNewMedicine";
 
+
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import MenuIcon from '@mui/icons-material/Menu';
+
+
+
 function MainPage() {
   return (
     <div className=" flex flex-row">
       <section
         id="left_Section"
-        className="test w-[0px] hover:w-auto overflow-hidden  animation1"
-      >
-        <SideBar />
-      </section>
+        className=" w-[0px]  overflow-hidden  animation1"
+      ></section>
 
       <div className=" border-2 w-full">
-        <section className="" id="header_Section">
+        <section className="  " id="header_Section">
           <Header />
         </section>
+        <div className="w-[50px]  overflow-hidden">
+          <SideBarToggle />
+        </div>
 
-        <section id="right_Section" className=" bg-slate-100 ">
+        <section id="right_Section" className=" bg-slate-100">
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Dashboard />} />
@@ -51,3 +59,39 @@ function MainPage() {
 }
 
 export default MainPage;
+
+function SideBarToggle() {
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  return (
+    <div>
+      <div className=" absolute top-4">
+        <Button onClick={toggleDrawer("left", true)}><MenuIcon/></Button>
+      </div>
+
+      <Drawer
+        anchor={"left"}
+        open={state["left"]}
+        onClose={toggleDrawer("left", false)}
+      >
+        <SideBar />
+      </Drawer>
+    </div>
+  );
+}

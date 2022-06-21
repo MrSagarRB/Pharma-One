@@ -4,8 +4,13 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-// import "rsuite/dist/rsuite.min.css";
-import { DateRangePicker } from "rsuite";
+// Date picker
+
+import TextField from "@mui/material/TextField";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+
+import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 
 import ReactApexChart from "react-apexcharts";
 
@@ -29,11 +34,11 @@ function SalesReport() {
           <div className="flex flex-col gap-2">
             {" "}
             <p className="text-[#1D242E]">Date Range</p>
-            <DateRangePicker />
+            <DateTimePickerComp />
           </div>
         </div>
 
-        <div className="flex items-center">{/* Date Picker */}</div>
+        <div className="flex items-center"> {/* Date Picker */} </div>
       </div>
 
       <div className="flex mt-10 gap-28">
@@ -145,6 +150,28 @@ function SaleModeChart() {
         type="area"
         height={350}
       />
+    </div>
+  );
+}
+
+function DateTimePickerComp() {
+  const [value, setValue] = React.useState(new Date("2014-08-18T21:11:54"));
+
+  const handleChange = (newValue) => {
+    setValue(newValue);
+  };
+  return (
+    <div>
+      {" "}
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <DesktopDatePicker
+          label="Date desktop"
+          inputFormat="MM/dd/yyyy"
+          value={value}
+          onChange={handleChange}
+          renderInput={(params) => <TextField {...params} />}
+        />
+      </LocalizationProvider>
     </div>
   );
 }
